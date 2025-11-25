@@ -38,7 +38,7 @@ span {
 
 @keyframes rotateIn {
   0% {
-    transform: rotate(12deg) translateX(-0.5rem);
+    transform: rotate(20deg) translateX(-0.5rem);
   }
 
   100% {

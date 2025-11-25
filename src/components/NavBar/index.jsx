@@ -19,7 +19,7 @@ const NavBar = () => {
           <div className="text-2xl font-bold flex flex-row items-center group">
             <img
               ref={logoRef}
-              className={`w-10 transition-all group-hover:rotate-90 duration-400 ease-in-out ${
+              className={`w-10 transition-all group-hover:rotate-0 duration-400 ease-in-out ${
                 isLogoVisible && 'rotate-90'
               }`}
               src={sunlogo}
@@ -30,7 +30,7 @@ const NavBar = () => {
             </a>
           </div>
 
-          <div className="hidden md:flex gap-8 text-lg items-center">
+          <div className="hidden md:flex gap-8 text-lg items-baseline">
             <a
               href="#home"
               className="hover:text-[var(--bg-homepage)] transition"

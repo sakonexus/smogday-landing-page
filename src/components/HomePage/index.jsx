@@ -55,10 +55,10 @@ const HomePage = () => {
           />
           <img className="absolute inset-0" src={mainlogo} />
         </div>
-        <div className="flex w-full flex-col px-4 mt-[-3rem] md:flex-row md:px-0 md:gap-x-8 justify-center items-center md:max-w-2xl">
+        <div className="flex w-full flex-col px-4 mt-[-3rem] md:flex-row md:px-0 md:gap-x-8 justify-center md:items-stretch items-center md:max-w-2xl">
           <div
             ref={addressBoxRef}
-            className={`bg-white px-4 py-8 md:w-1/2 w-full flex flex-row rounded-md shadow-md home-element-transition ${
+            className={`bg-white px-4 py-8 md:w-1/2 w-80 flex flex-row rounded-md shadow-md home-element-transition ${
               isAddressBoxVisible ? 'home-hover-action' : 'opacity-0'
             }`}
           >
@@ -78,7 +78,7 @@ const HomePage = () => {
           <a
             ref={phoneBoxRef}
             href="tel:16507329732"
-            className={`bg-white px-4 py-8 md:w-1/2 w-full flex flex-row rounded-md shadow-md mt-8 items-center home-element-transition md:mt-0 ${
+            className={`bg-white px-4 py-8 md:w-1/2 w-80 flex flex-row rounded-md shadow-md mt-8 items-center home-element-transition md:mt-0 ${
               isPhoneBoxVisible ? 'home-hover-action' : 'opacity-0'
             }`}
             aria-label="650-732-9732"
