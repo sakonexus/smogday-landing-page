@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap');
+@import 'tailwindcss';
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --font-Helvetica: Helvetica, Arial sans-serif;
+  --font-SpaceGrotesk: 'Space Grotesk', Helvetica, sans-serif;
+}
+
+:root {
+  --bg-nav: rgb(241, 249, 0);
+  --bg-homepage: rgb(100, 149, 237);
+}
+
+.nav {
+  @apply bg-[var(--bg-nav)] px-4 w-full backdrop-blur-md border-b border-gray-200 z-50;
+}
+
+h1,
+h2,
+h3,
+p,
+span {
+  @apply font-Helvetica;
+}
+
+.home-element-transition {
+  @apply transition-all duration-300 translate-y-6;
+}
+
+.home-hover-action {
+  @apply opacity-100 translate-y-0;
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: rotate(12deg) translateX(-0.5rem);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
+.sunray {
+  animation: rotateIn 0.6s ease-out forwards;
+}
