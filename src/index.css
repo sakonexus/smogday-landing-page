@@ -25,7 +25,7 @@ h2,
 h3,
 p,
 span {
-  @apply font-Helvetica;
+  @apply font-Helvetica text-slate-900;
 }
 
 .home-element-transition {
@@ -48,4 +48,9 @@ span {
 
 .sunray {
   animation: rotateIn 0.6s ease-out forwards;
+}
+
+gmp-map {
+  height: 400px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
 }

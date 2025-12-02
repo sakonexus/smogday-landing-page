@@ -52,7 +52,7 @@ const NavBar = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center border-t-2 border-black mt-2 md:hidden">
+        <div className="flex flex-col justify-center items-center border-t-2 border-slate-900 mt-2 md:hidden">
           <a
             href="tel:16507329732"
             className="font-SpaceGrotesk uppercase px-12 py-3 border-2 border-black mt-4 mb-6 font-medium"
@@ -69,17 +69,17 @@ const NavBar = () => {
         aria-label="Toggle menu"
       >
         <span
-          className={`block h-1 w-full bg-black rounded transition-all duration-300 ${
+          className={`block h-[0.22rem] w-full bg-slate-900 rounded transition-all duration-300 ${
             open ? 'translate-y-3 rotate-45' : ''
           }`}
         ></span>
         <span
-          className={`block h-1 w-full bg-black rounded transition-all duration-300 ${
+          className={`block h-[0.22rem] w-full bg-slate-900 rounded transition-all duration-300 ${
             open ? 'opacity-0' : ''
           }`}
         ></span>
         <span
-          className={`block h-1 w-full bg-black rounded transition-all duration-300 ${
+          className={`block h-[0.22rem] w-full bg-slate-900 rounded transition-all duration-300 ${
             open ? '-translate-y-2 -rotate-45' : ''
           }`}
         ></span>

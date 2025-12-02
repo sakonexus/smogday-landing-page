@@ -3,11 +3,13 @@ import {
   StoreRounded,
   LocalPhoneRounded,
   CheckCircleRounded,
+  Check,
 } from '@mui/icons-material';
 import DMVlogo from '@assets/dmv-logo.png';
 import { useIntersectionObserver } from '@/lib/useIntersectionObserver';
 import sunrays from '@assets/logo-sunrays.png';
 import mainlogo from '@assets/logo-main.png';
+import GoogleMaps from './GoogleMaps';
 
 const INTERSECT_THESHOLD = 0.4;
 
@@ -118,23 +120,31 @@ const HomePage = () => {
       <div className="flex flex-col w-full bg-[var(--bg-homepage)] pt-12 px-8 items-center">
         <div
           ref={marketingRef}
-          className={`flex flex-col text-center justify-center items-center max-w-6xl home-element-transition ${
+          className={`flex flex-col max-w-6xl home-element-transition text-center ${
             isMarketingVisible ? 'home-hover-action' : 'opacity-0'
           }`}
         >
-          <p className="text-white font-bold text-3xl">
-            In and out quick! ✅
-            <br />
-            <br />
-            Pass or <span className="text-[var(--bg-nav)]">
-              FREE RETEST*
-            </span>{' '}
-            within 30 days ✅
-          </p>
-          <p className="text-slate-700 mt-2">
-            *Non-STAR Directed Vehicles: Only vehicles from the year 2000 or
-            newer are eligible.
-          </p>
+          <h2 className="text-3xl font-semibold">Fast. Easy. Guaranteed.</h2>
+          <div className="flex flex-col bg-white shadow-md justify-start p-4 rounded-md text-left mt-6">
+            <div className="flex flex-row gap-x-2 items-center  text-left">
+              <Check sx={{ color: '#15803D', fontSize: '3rem' }} />
+              <p className="text-slate-800 font-bold text-2xl">
+                In and out quick!
+              </p>
+            </div>
+            <div className="flex flex-row gap-x-2 items-start mt-4 text-left">
+              <Check sx={{ color: '#15803D', fontSize: '3rem' }} />
+              <p className="text-slate-800 font-bold text-2xl mt-2">
+                Pass or{' '}
+                <span className="text-[var(--bg-homepage)]!">FREE RETEST*</span>{' '}
+                within 30 days
+              </p>
+            </div>
+            <p className="text-xl text-red-700! font-bold mt-4">
+              *Non-STAR Directed Vehicles: Only vehicles from the year 2000 or
+              newer are eligible.
+            </p>
+          </div>
         </div>
       </div>
       <div className="flex justify-center items-center w-full bg-[var(--bg-nav)] mt-8">
@@ -157,19 +167,12 @@ const HomePage = () => {
       <div className="flex justify-center items-center w-full px-4 py-8 bg-[var(--bg-nav)]">
         <div
           id="location"
-          className={`flex justify-center items-center max-w-6xl w-full home-element-transition ${
+          className={`flex justify-center items-center max-w-6xl w-full home-element-transition overflow-hidden ${
             isLocationVisible ? 'home-hover-action' : 'opacity-0'
           }`}
           ref={locationRef}
         >
-          <iframe
-            className="w-full h-[450px]"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.4556283854586!2d-122.26874182306932!3d37.52075552675008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9f91b0e0a585%3A0x8231a88708e2cd6e!2sSmogDay!5e0!3m2!1sen!2sus!4v1764038982758!5m2!1sen!2sus"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <GoogleMaps />
         </div>
       </div>
       <div className="flex w-full bg-[var(--bg-nav)] items-center justify-center text-center py-12">
